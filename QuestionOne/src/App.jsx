@@ -11,6 +11,7 @@ import About from "./pages/About";
 import AppLayout from "./components/layout/AppLayout";
 import getProductData from "./api/ProductData.jsx";
 import Product from "./pages/Product.jsx";
+import ErrorPage from "./pages/ErrorPage";
 const App = () => {
   const router = createBrowserRouter([
     {
