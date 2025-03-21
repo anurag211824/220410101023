@@ -2,7 +2,7 @@ import React from "react";
 import { useLoaderData } from "react-router-dom";
 
 const Product = () => {
-  const products = useLoaderData(); // Use correct variable name
+  const products = useLoaderData();
 
   return (
     <div className="p-6 max-w-[1200px] m-auto">
