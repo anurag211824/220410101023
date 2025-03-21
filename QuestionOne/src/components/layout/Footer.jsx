@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white p-4 mt-8">
       <div className="flex justify-between items-center">
-        <p className="text-sm">© 2024 My App. All rights reserved.</p>
+        <p className="text-sm">© 2025 My App. All rights reserved.</p>
         <ul className="flex space-x-6">
           {/* Footer Navigation Links */}
           <li>
