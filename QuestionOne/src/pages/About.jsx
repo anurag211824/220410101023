@@ -6,7 +6,6 @@ const About = () => {
     <div>
       <h2>About this SocialMedia</h2>
       <p>
-      
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, cum!
       </p>
     </div>

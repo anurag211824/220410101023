@@ -1,50 +1,45 @@
-/* eslint-disable no-unused-vars */
+
 import React from "react";
 import {
-  createBrowserRouter, // To create a router for managing navigation
-  createRoutesFromElements, // Used for defining routes in JSX syntax
-  RouterProvider, // Provides the router context to the application
+  createBrowserRouter, 
+  RouterProvider,
 } from "react-router-dom";
-import { Route } from "react-router-dom"; // For defining individual routes
-import Home from "./pages/Home"; // Home page component
-import Contact from "./pages/Contact"; // Contact page component
-import Movie from "./pages/Product.jsx"; // Movie page component
-import About from "./pages/About"; // About page component
-import AppLayout from "./components/layout/AppLayout"; // App layout component with header, footer, and outlet for nested routes
-import ErrorPage from "./pages/ErrorPage";
+import { Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
+import AppLayout from "./components/layout/AppLayout";
 import getProductData from "./api/ProductData.jsx";
 import Product from "./pages/Product.jsx";
 const App = () => {
-  // Define routes using createBrowserRouter
   const router = createBrowserRouter([
     {
-      path: "/", // Base path
-      element: <AppLayout />, // Layout component wrapping all nested routes
+      path: "/",
+      element: <AppLayout />,
       errorElement:<ErrorPage/>,
       children: [
         {
-          path: "/", // Home page route
+          path: "/",
           element: <Home />,
         },
         {
-          path: "/about", // About page route
+          path: "/about",
           element: <About />,
         },
         {
-          path: "/products", // Movie page route
+          path: "/products",
           element: <Product />,
           loader:getProductData
         },
         {
-          path: "/contact", // Contact page route
+          path: "/contact",
           element: <Contact />,
         },
       ],
     },
   ]);
-  // Provide the router to the application
   return <RouterProvider router={router} />;
 };
 
-export default App; // Export App as the default export
+export default App;
 
